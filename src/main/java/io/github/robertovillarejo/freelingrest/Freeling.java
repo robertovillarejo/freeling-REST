@@ -7,8 +7,9 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix="freeling")
 public class Freeling {
 	
-	String lang;
-	String data;
+	private String lang;
+	
+	private String data;
 	
 	public String getLang() {
 		return lang;

@@ -19,8 +19,8 @@ public class ConfigurationAnalyzer {
 	private final String lang;
 	
 	public ConfigurationAnalyzer(Freeling freeling) {
-		data = freeling.data;
-		lang = freeling.lang;
+		data = freeling.getData();
+		lang = freeling.getLang();
 	}
 	
 	@Bean
