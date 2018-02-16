@@ -16,7 +16,7 @@ import io.github.robertovillarejo.freelingrest.service.AnalyzerService;
 @RequestMapping("/api")
 public class AnalyzerController {
 	
-	private Logger log =  LoggerFactory.getLogger(AnalyzerController.class);
+	private static final Logger LOGGER =  LoggerFactory.getLogger(AnalyzerController.class);
 	
 	private AnalyzerService analyzer;
 		
@@ -26,7 +26,7 @@ public class AnalyzerController {
 	
 	@GetMapping("/analyze")
 	public List<List<WordDTO>> analyze(@RequestParam String text) {
-		log.debug("REST request to analyze text: {}", text);
+		LOGGER.debug("REST request to analyze text: {}", text);
 		return analyzer.analyze(text);
 	}
 
